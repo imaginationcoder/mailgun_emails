@@ -75,7 +75,7 @@ Rails.application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
 
-  ENV['SENDER'] = 'labs@maisasolutions.com'
+  ENV['SENDER'] = 'Dave Arora <sales@maisasolutions.com>'
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
