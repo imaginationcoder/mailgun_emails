@@ -1,0 +1,59 @@
+<%= form_tag action: 'send_mail' do %>
+    <%#=label_tag 'template name' %>
+    <%#=text_field_tag 'template_name'%>
+    <!--<br/><br/>-->
+    <%#=label_tag 'Subject' %>
+    <br>
+    <%=text_field_tag 'subject',nil,placeholder: 'Subject',class: "textbox"%>
+    <br/>
+    <%#=label_tag 'emails' %><br/>
+    <%=text_area_tag 'emails',nil,placeholder: 'Enter emails with comma separated' ,class: "textbox email_box"%><br/><br>
+    <div><%= submit_tag 'Send',  data: {confirm: "Are you sure?"} ,class: 'send_button' %></div>
+<% end %>
+
+
+<style>
+    .textbox {
+        background: -moz-linear-gradient(top,#5B74A8 0%,#5B74A8 100%);
+        border: 3px inset #FFA5A5;
+        outline:0;
+        height:25px;
+        width: 275px;
+        font-size: 19px
+    }
+    .email_box{
+        height:300px;
+        width: 800px;
+    }
+    ::-webkit-input-placeholder {
+        font-size: 16px;
+        padding-left: 5px;
+    }
+    .send_button{
+        cursor:pointer; /*forces the cursor to change to a hand when the button is hovered*/
+        padding:5px 25px; /*add some padding to the inside of the button*/
+        background:#35b128; /*the colour of the button*/
+        border:1px solid #33842a; /*required or the default border for the browser will appear*/
+        /*give the button curved corners, alter the size as required*/
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        /*give the button a drop shadow*/
+        -webkit-box-shadow: 0 0 4px rgba(0,0,0, .75);
+        -moz-box-shadow: 0 0 4px rgba(0,0,0, .75);
+        box-shadow: 0 0 4px rgba(0,0,0, .75);
+        /*style the text*/
+        color:#f3f3f3;
+        font-size:1.1em;
+    }
+    /****NOW STYLE THE BUTTON'S HOVER STATE***/
+    .send_button:hover, .send_button:focus {
+        background-color :#399630; /*make the background a little darker*/
+        /*reduce the drop shadow size to give a pushed button effect*/
+        -webkit-box-shadow: 0 0 1px rgba(0,0,0, .75);
+        -moz-box-shadow: 0 0 1px rgba(0,0,0, .75);
+        box-shadow: 0 0 1px rgba(0,0,0, .75);
+    }
+
+
+</style>
